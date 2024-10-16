@@ -1,0 +1,35 @@
+
+
+<!-- <h1>please Sign In</h1> -->
+<form (ngSubmit)="onSubmit()" [formGroup]="signInForm" class="mt-5">
+    <div>
+        <label for="email">Email</label>
+        <input 
+            type="text" 
+            id="email" 
+            class="form-control" 
+            formControlName="email">
+        <div *ngIf="signInForm.get('email')?.errors && (signInForm.get('email')?.touched || signInForm.get('email')?.dirty)" class="alert alert-danger">
+            <p *ngIf="signInForm.get('email')?.getError('required')">Email is required</p>
+            <p *ngIf="signInForm.get('email')?.getError('email')">Invalid email format</p>
+        </div>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input 
+            type="password" 
+            id="password" 
+            class="form-control" 
+            formControlName="password">
+        <div *ngIf="signInForm.get('password')?.errors && (signInForm.get('password')?.touched || signInForm.get('password')?.dirty)" class="alert alert-danger">
+            <p *ngIf="signInForm.get('password')?.getError('required')">Password is required</p>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="signInForm.invalid">Sign In</button>
+
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+        {{ errorMessage }}
+    </div>
+</form>
