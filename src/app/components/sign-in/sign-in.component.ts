@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { UserAuthService } from 'src/app/services/user-auth.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { UserAuthService } from 'src/app/services/user-auth.service';
 export class SignInComponent {
   errorMessage: string | null = null;
 
-  constructor( private _userAuthService: UserAuthService) { }
+  constructor( private _userAuthService: UserAuthService , private _router :Router ,private toastr: ToastrService) { }
   signInForm:FormGroup= new FormGroup({
     email: new FormControl("",[Validators.required,Validators.email]),
     password: new FormControl("",[Validators.required]),
@@ -24,11 +26,16 @@ export class SignInComponent {
         // Store the userId in local storage
         localStorage.setItem('userId', user.id.toString());
         this.errorMessage = null;
-        alert('Sign-in successful');
-        // Redirect or navigate to another page if necessary
+        this._router.navigate(['/tasks']);
+        this.toastr.success('Login successful');
+
       } else {
         this.errorMessage = 'Invalid email or password';
       }
     });
+  }
+  signOut(){
+    localStorage.removeItem('userId')
+    this._router.navigate(['/signIn'])
   }
 }

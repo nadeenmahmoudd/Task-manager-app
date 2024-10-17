@@ -14,5 +14,18 @@ export class TaskService {
   getTasks(): Observable<any> {
     return this._httpClient.get(this.tasksUrl);
   }
+  // because the API is a static data the update will not work
+  updateTask(id: number, task: any): Observable<any> {
+    return this._httpClient.put<any>(`${this.tasksUrl}/${id}`, task);
+  }
+ // Get tasks from local storage
+ getTasksFromLocalStorage(): any[] {
+  return JSON.parse(localStorage.getItem('tasks') || '[]');
+}
+
+// Save tasks to local storage
+saveTasksToLocalStorage(tasks: any[]): void {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
 }

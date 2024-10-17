@@ -1,1 +1,49 @@
-<p>tasks works!</p>
+<!-- <section class="container">
+
+</section> -->
+
+<div class="container mt-4">
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Welcome!</strong> Here are your tasks. You can mark them as complete or view the details.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <div class="row">
+      <div *ngFor="let task of tasks" class="col-md-6 col-lg-4 mb-4">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">{{ task.title }}</h5>
+            <!-- <p class="card-text text-muted"><strong>Description:</strong> {{ task.description }}</p> -->
+            <p class="card-text d-flex">
+              <span class="badge" [ngClass]="task.completed ? 'bg-success' : 'bg-warning'">
+                {{ task.completed ? 'Completed' : 'Pending' }}
+              </span>
+              <button 
+              class="btn btn-sm ms-3"
+              [ngClass]="{'btn-success rounded-circle': task.completed, 'btn-secondary': !task.completed}"
+              (click)="toggleTaskCompletion(task)">
+              <i class="fas" [ngClass]="task.completed ? 'fa-check' : 'fa-hourglass'"></i>
+              {{ task.completed ? '' : 'Mark as Complete' }} <!-- Display text when task is pending -->
+            </button>
+            
+              <!-- <button class="btn btn-secondary btn-sm ms-3"
+              (click)="toggleTaskCompletion(task)">
+        {{ task.completed ? 'Mark as Incomplete' : 'Mark as Complete' }}
+      </button> -->
+
+      <!-- <button 
+  class="btn btn-sm rounded-circle ms-3"
+  [ngClass]="{'btn-success': task.completed, 'btn-info': !task.completed}"
+  (click)="toggleTaskCompletion(task)">
+  <i class="fas" [ngClass]="task.completed ? 'fa-check' : 'fa-hourglass'"></i>
+</button> -->
+
+            </p>
+            <!-- <p class="card-text text-muted">Assigned to User ID: {{ task.userId }}</p> -->
+          
+            <a [routerLink]="['/task-details', task.id]" class="btn btn-primary btn-sm mt-2">View Task Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

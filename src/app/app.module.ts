@@ -8,7 +8,11 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { LoaderComponent } from './components/loader/loader.component';
+import { HttpRequestInterceptor } from './interceptors/http-request.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -17,16 +21,24 @@ import { HttpClientModule } from '@angular/common/http';
     SignInComponent,
     TasksComponent,
     TaskDetailsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule ,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
