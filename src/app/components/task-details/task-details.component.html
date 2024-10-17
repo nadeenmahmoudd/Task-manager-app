@@ -1,1 +1,39 @@
-<p>task-details works!</p>
+<div class="mt-5">
+  <div class="container">
+    <div class="  shadow" >
+      <div class="p-5">
+        <h3 class="text-center">{{ task.title }}</h3>
+        <hr />
+        <p class="card-text fs-5">
+          <strong>Description:</strong> {{ task.description }}
+        </p>
+        <p class="card-text fs-5">
+          <strong>Assigned By:</strong> {{ task.assignedBy }}
+        </p>
+        <p class="card-text fs-5">
+          <strong>Deadline:</strong> {{ task.deadline | date : "shortDate" }}
+        </p>
+        <span
+          class="badge"
+          [ngClass]="task.completed ? 'bg-success' : 'bg-warning'"
+        >
+          {{ task.completed ? "Completed" : "Pending" }}
+        </span>
+        <button
+          class="btn btn-sm mt-4 d-block"
+          [ngClass]="{
+            'btn-success rounded-circle': task.completed,
+            'btn-secondary': !task.completed
+          }"
+          (click)="toggleTaskCompletion(task)"
+        >
+          {{ task.completed ? "" : "Click to Complete" }}
+          <i
+            class="fas"
+            [ngClass]="task.completed ? 'fa-check' : 'fa-hourglass'"
+          ></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { authGuard } from './guards/auth.guard'; // Import the guard
 
 const routes: Routes = [
+  { path: '', component: TasksComponent },
   { path: 'signIn', component: SignInComponent },
   
   // Protect the tasks and task-details routes with the authGuard

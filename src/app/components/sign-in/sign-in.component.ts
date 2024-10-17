@@ -34,8 +34,4 @@ export class SignInComponent {
       }
     });
   }
-  signOut(){
-    localStorage.removeItem('userId')
-    this._router.navigate(['/signIn'])
-  }
 }

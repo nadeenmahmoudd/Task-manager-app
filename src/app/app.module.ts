@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -12,6 +12,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './components/loader/loader.component';
 import { HttpRequestInterceptor } from './interceptors/http-request.interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -22,10 +23,12 @@ import { ToastrModule } from 'ngx-toastr';
     TasksComponent,
     TaskDetailsComponent,
     NotFoundComponent,
-    LoaderComponent
+    LoaderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule ,
     FormsModule,

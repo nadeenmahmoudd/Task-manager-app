@@ -1,0 +1,11 @@
+.button{
+    float: right;
+}
+.app-signIn{
+    width: auto;
+    height: 70%;
+    margin-top: 10%;
+}
+.signIn-container{
+    margin-top: 4%
+}

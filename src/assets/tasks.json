@@ -1,107 +1,138 @@
-[
-  {
-    "id": 1,
-    "title": "Buy groceries",
-    "completed": false,
-    "userId": 1,
-    "description": "Buy vegetables, fruits, and dairy products from the supermarket."
-  },
-  {
-    "id": 2,
-    "title": "Clean the house",
-    "completed": true,
-    "userId": 2,
-    "description": "Vacuum the living room, clean the kitchen, and tidy up the bedrooms."
-  },
-  {
-    "id": 3,
-    "title": "Finish Angular project",
-    "completed": false,
-    "userId": 1,
-    "description": "Complete the remaining tasks for the Angular project, including implementing the authentication module."
-  },
-  {
-    "id": 4,
-    "title": "Read a book",
-    "completed": true,
-    "userId": 2,
-    "description": "Finish reading the last chapter of the current book."
-  },
-  {
-    "id": 5,
-    "title": "Go for a jog",
-    "completed": false,
-    "userId": 1,
-    "description": "Jog around the park for 30 minutes to stay active."
-  },
-  {
-    "id": 6,
-    "title": "Prepare presentation slides",
-    "completed": true,
-    "userId": 2,
-    "description": "Create slides for the upcoming project presentation."
-  },
-  {
-    "id": 7,
-    "title": "Write a blog post",
-    "completed": false,
-    "userId": 1,
-    "description": "Draft a new blog post about the latest trends in web development."
-  },
-  {
-    "id": 8,
-    "title": "Organize the garage",
-    "completed": false,
-    "userId": 2,
-    "description": "Sort and clean the garage, and discard old items."
-  },
-  {
-    "id": 9,
-    "title": "Fix the leaking faucet",
-    "completed": true,
-    "userId": 1,
-    "description": "Repair the leaking faucet in the kitchen to prevent water waste."
-  },
-  {
-    "id": 10,
-    "title": "Plan a weekend trip",
-    "completed": false,
-    "userId": 2,
-    "description": "Research nearby destinations and make a plan for a weekend getaway."
-  },
-  {
-    "id": 11,
-    "title": "Update LinkedIn profile",
-    "completed": false,
-    "userId": 1,
-    "description": "Add recent projects and experiences to the LinkedIn profile."
-  },
-  {
-    "id": 12,
-    "title": "Attend a webinar",
-    "completed": true,
-    "userId": 2,
-    "description": "Join the scheduled online webinar on digital marketing."
-  },
-  {
-    "id": 13,
-    "title": "Learn a new recipe",
-    "completed": false,
-    "userId": 1,
-    "description": "Try cooking a new dish and learn its recipe from a cooking show."
-  },
-  {
-    "id": 14,
-    "title": "Water the plants",
-    "completed": true,
-    "userId": 2,
-    "description": "Ensure all indoor and outdoor plants are well-watered."
-  },
-  {
-    "id": 15,
-    "title": "Backup important files",
-    "completed": false,
-    "userId": 1,
-    "description": "Create a backup of all critical documents and media files."
-  }
-]
+ [
+    {
+      "id": 1,
+      "title": "Buy groceries",
+      "completed": false,
+      "userId": 1,
+      "description": "Buy vegetables, fruits, and dairy products from the supermarket.",
+      "deadline": "2024-10-20",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 2,
+      "title": "Clean the house",
+      "completed": true,
+      "userId": 2,
+      "description": "Vacuum the living room, clean the kitchen, and tidy up the bedrooms.",
+      "deadline": "2024-10-15",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 3,
+      "title": "Finish Angular project",
+      "completed": false,
+      "userId": 1,
+      "description": "Complete the remaining tasks for the Angular project, including implementing the authentication module.",
+      "deadline": "2024-10-25",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 4,
+      "title": "Read a book",
+      "completed": true,
+      "userId": 2,
+      "description": "Finish reading the last chapter of the current book.",
+      "deadline": "2024-10-18",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 5,
+      "title": "Go for a jog",
+      "completed": false,
+      "userId": 1,
+      "description": "Jog around the park for 30 minutes to stay active.",
+      "deadline": "2024-10-22",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 6,
+      "title": "Prepare presentation slides",
+      "completed": true,
+      "userId": 2,
+      "description": "Create slides for the upcoming project presentation.",
+      "deadline": "2024-10-19",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 7,
+      "title": "Write a blog post",
+      "completed": false,
+      "userId": 1,
+      "description": "Draft a new blog post about the latest trends in web development.",
+      "deadline": "2024-10-21",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 8,
+      "title": "Organize the garage",
+      "completed": false,
+      "userId": 2,
+      "description": "Sort and clean the garage, and discard old items.",
+      "deadline": "2024-10-23",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 9,
+      "title": "Fix the leaking faucet",
+      "completed": true,
+      "userId": 1,
+      "description": "Repair the leaking faucet in the kitchen to prevent water waste.",
+      "deadline": "2024-10-16",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 10,
+      "title": "Plan a weekend trip",
+      "completed": false,
+      "userId": 2,
+      "description": "Research nearby destinations and make a plan for a weekend getaway.",
+      "deadline": "2024-10-24",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 11,
+      "title": "Update LinkedIn profile",
+      "completed": false,
+      "userId": 1,
+      "description": "Add recent projects and experiences to the LinkedIn profile.",
+      "deadline": "2024-10-27",
+      "assignedBy": "User X"
+    },
+    {
+      "id": 12,
+      "title": "Attend a webinar",
+      "completed": true,
+      "userId": 2,
+      "description": "Join the scheduled online webinar on digital marketing.",
+      "deadline": "2024-10-20",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 13,
+      "title": "Learn a new recipe",
+      "completed": false,
+      "userId": 1,
+      "description": "Try cooking a new dish and learn its recipe from a cooking show.",
+      "deadline": "2024-10-28",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 14,
+      "title": "Water the plants",
+      "completed": true,
+      "userId": 2,
+      "description": "Ensure all indoor and outdoor plants are well-watered.",
+      "deadline": "2024-10-15",
+      "assignedBy": "User Y"
+    },
+    {
+      "id": 15,
+      "title": "Backup important files",
+      "completed": false,
+      "userId": 1,
+      "description": "Create a backup of all critical documents and media files.",
+      "deadline": "2024-10-30",
+      "assignedBy": "User X"
+    }
+  ]
+  
